@@ -1,0 +1,9 @@
+module: text-search
+type: postgresql
+patch: ~
+
+emits: ~
+
+locks: ~
+
+cron: ~

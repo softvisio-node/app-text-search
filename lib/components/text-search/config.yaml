@@ -1,0 +1,10 @@
+dependencies:
+  - dbh
+
+optionalDependencies:
+  - cluster
+
+config:
+  model: Xenova/all-MiniLM-L6-v2
+  type: RETRIEVAL_DOCUMENT
+  openAiApiKey: ~

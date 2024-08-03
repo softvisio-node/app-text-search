@@ -1,0 +1,7 @@
+private: true
+
+docs:
+  location: docs
+
+  externalTypes:
+    - softvisio-node/result

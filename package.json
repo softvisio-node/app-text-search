@@ -1,0 +1,45 @@
+{
+    "name": "@softvisio/app-component-text-search",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Text search application component",
+    "keywords": [
+        "softvisio",
+        "text search"
+    ],
+    "homepage": "https://softvisio-node.github.io/app-component-text-search/",
+    "bugs": {
+        "url": "https://github.com/softvisio-node/app-component-text-search/issues",
+        "email": "root <root@softvisio.net>"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/softvisio-node/app-component-text-search.git"
+    },
+    "license": "ISC",
+    "author": "root <root@softvisio.net>",
+    "type": "module",
+    "imports": {
+        "#core/*": "@softvisio/core/*",
+        "#lib/*": "./lib/*.js",
+        "#resources/*": "./resources/*"
+    },
+    "exports": {
+        "./*": "./lib/*.js",
+        "./app.yaml": "./lib/app.yaml",
+        "./resources/*": "./resources/*"
+    },
+    "files": [
+        "/bin",
+        "/lib",
+        "/resources",
+        "/src"
+    ],
+    "dependencies": {
+        "@xenova/transformers": "^2.17.2",
+        "gpt-tokenizer": "^2.2.1"
+    },
+    "peerDependencies": {
+        "@softvisio/core": "^7.0.0"
+    }
+}
