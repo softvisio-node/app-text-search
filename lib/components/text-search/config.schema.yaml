@@ -11,11 +11,7 @@
         - Xenova/all-MiniLM-L6-v2
 
         # google
-        - textembedding-gecko@001
-        - textembedding-gecko@003
         - text-embedding-004
-
-        - textembedding-gecko-multilingual@001
         - text-multilingual-embedding-002
 
         # openai
