@@ -1,7 +1,6 @@
 {
     "name": "@softvisio/app-component-text-search",
     "version": "0.0.0",
-    "private": true,
     "description": "Text search application component",
     "keywords": [
         "softvisio",
