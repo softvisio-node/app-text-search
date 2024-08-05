@@ -1,6 +1,8 @@
 # Introduction
 
-<!-- Tell about the project -->
+Text search application component.
+
+Provides possibility to perform full-text seatch and similarity search using text embeddings.
 
 ## Install
 
@@ -10,4 +12,4 @@ npm i @softvisio/app-component-text-search
 
 ## Usage
 
-<!-- Tell about how to use the project, give code examples -->
+#### Full-text search
