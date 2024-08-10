@@ -1,5 +1,16 @@
 # Changelog
 
+### 1.0.0-alpha.1 (2024-08-10)
+
+Fixes:
+
+-   fix: .softvisio-cli.yaml renamed to .cli.yaml
+-   fix: embeddings
+-   fix: full text search
+-   fix: xenova import
+
+Migration:
+
 ### 1.0.0-alpha.0 (2024-08-05)
 
 Fixes:
