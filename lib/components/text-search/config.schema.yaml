@@ -28,8 +28,6 @@
         - QUESTION_ANSWERING
         - FACT_VERIFICATION
 
-    openAiApiKey: { type: ["null", string] }
-
   additionalProperties: false
   required:
     - model
