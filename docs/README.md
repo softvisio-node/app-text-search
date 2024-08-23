@@ -55,3 +55,79 @@ FROM
 WHERE
     get_text_search_tsvector( text, 'english' ) @@ get_text_search_tsquery( 'search query', 'english' );
 ```
+
+#### Similarity search
+
+```sql
+CREATE TABLE document (
+    id serial8 PRIMARY KEY,
+    content text NOT NULL,
+    text_search_document_id int53 NOT NULL REFERENCES text_search_document ( id ) ON DELETE RESTRICT
+);
+
+CREATE TABLE query (
+    id serial8 PRIMARY KEY,
+    content text NOT NULL,
+    text_search_document_id int53 NOT NULL REFERENCES text_search_document ( id ) ON DELETE RESTRICT
+);
+```
+
+Create documents
+
+```javascript
+// create documents storage
+const documentsStorage = await this.app.textSearch.createStorage("text-embedding-3-small", "RETRIEVAL_DOCUMENT");
+
+if (documentsStorage.ok) {
+    // XXX store documentsStorage.data.id somewhere
+}
+
+// create document
+const document = await this.app.textSearch.createDocument(documentsStorage.data.id, "DOCUMENT TEXT");
+
+if (document.ok) {
+    // XXX store document.data.id in text_search_document_id
+}
+```
+
+Create queries
+
+```javascript
+// create queries storage
+const queriesStorage = await this.app.textSearch.createStorage("text-embedding-3-small", "RETRIEVAL_QUERY");
+
+if (queriesStorage.ok) {
+    // XXX store queriesStorage.data.id somewhere
+}
+
+// create query
+const query = await this.app.textSearch.createDocument(queriesStorage.data.id, "QUERY TEXT");
+
+if (query.ok) {
+    // XXX store query.data.id in text_search_document_id
+}
+```
+
+Search documents similar to the query
+
+```javascript
+const modelVectorDimensions = 1536,
+    distanceThreshold = 0.2,
+    queryDocumentId = 1;
+
+const res = await dbh.select(sql`
+SELECT
+    document.id,
+    text_search_vector.vector::vector( ${modelVectorDimensions} ) <=> get_text_search_vector( ${queryDocumentId}::int53 ) AS distance
+FROM
+    document,
+    text_search_vector AS e
+WHERE
+    document.text_search_document_id = text_search_vector.id
+    AND text_search_vector.storage_id = ?
+    AND ( text_search_vector.vector::vector( ${modelVectorDimensions} ) <=> get_text_search_vector( ${queryDocumentId}::int53 ) ) <= ${distanceThreshold}
+ORDER BY
+    text_search_vector.vector::vector( ${modelVectorDimensions} ) <=> get_text_search_vector( ${queryDocumentId}::int53 )
+LIMIT 10
+`);
+```
