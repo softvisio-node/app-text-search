@@ -72,8 +72,6 @@ CREATE TABLE document (
 CREATE FUNCTION document_after_delete_trigger () RETURNS trigger AS $$
 BEGIN
     DELETE FROM text_search_document WHERE id = OLD.text_search_document_id;
-
-    RETURN;
 END;
 SS LANGUAGE plpgsql;
 
@@ -88,8 +86,6 @@ CREATE TABLE query (
 CREATE FUNCTION query_after_delete_trigger () RETURNS trigger AS $$
 BEGIN
     DELETE FROM text_search_document WHERE id = OLD.text_search_document_id;
-
-    RETURN;
 END;
 SS LANGUAGE plpgsql;
 
