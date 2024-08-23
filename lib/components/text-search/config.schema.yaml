@@ -4,31 +4,6 @@
 
 - $id: config
   type: object
-  properties:
-    model:
-      enum:
-        # xenova
-        - Xenova/all-MiniLM-L6-v2
-
-        # google
-        - text-embedding-004
-        - text-multilingual-embedding-002
-
-        # openai
-        - text-embedding-3-large
-        - text-embedding-3-small
-
-    type:
-      enum:
-        - RETRIEVAL_QUERY
-        - RETRIEVAL_DOCUMENT
-        - SEMANTIC_SIMILARITY
-        - CLASSIFICATION
-        - CLUSTERING
-        - QUESTION_ANSWERING
-        - FACT_VERIFICATION
-
+  properties: {}
   additionalProperties: false
-  required:
-    - model
-    - type
+  required: []
