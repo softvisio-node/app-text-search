@@ -65,11 +65,31 @@ CREATE TABLE document (
     text_search_document_id int53 NOT NULL REFERENCES text_search_document ( id ) ON DELETE RESTRICT
 );
 
+CREATE FUNCTION document_after_delete_trigger () RETURNS trigger AS $$
+BEGIN
+    DELETE FROM text_search_document WHERE id = OLD.text_search_document_id;
+
+    RETURN;
+END;
+SS LANGUAGE plpgsql;
+
+CREATE TRIGGER document_after_delete AFTER DELETE ON document FOR EACH ROW EXECUTE FUNCTION document_after_delete_trigger();
+
 CREATE TABLE query (
     id serial8 PRIMARY KEY,
     content text NOT NULL,
     text_search_document_id int53 NOT NULL REFERENCES text_search_document ( id ) ON DELETE RESTRICT
 );
+
+CREATE FUNCTION query_after_delete_trigger () RETURNS trigger AS $$
+BEGIN
+    DELETE FROM text_search_document WHERE id = OLD.text_search_document_id;
+
+    RETURN;
+END;
+SS LANGUAGE plpgsql;
+
+CREATE TRIGGER query_after_delete AFTER DELETE ON query FOR EACH ROW EXECUTE FUNCTION query_after_delete_trigger();
 ```
 
 Create documents
@@ -131,3 +151,7 @@ ORDER BY
 LIMIT 10
 `);
 ```
+
+NOTES:
+
+-   `ORDER BY` must be `ASC` only, otherwise index will not be used.
