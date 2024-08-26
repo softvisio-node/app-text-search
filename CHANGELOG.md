@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.2.0 (2024-08-26)
+
+Features:
+
+-   feat: store content option
+-   feat: uniqueDocument option
+
 ### 1.1.0 (2024-08-25)
 
 Features:
