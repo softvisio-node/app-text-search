@@ -62,7 +62,7 @@ WHERE
 CREATE TABLE document (
     id serial8 PRIMARY KEY,
     content text NOT NULL,
-    text_search_document_id int53 NOT NULL REFERENCES text_search_embedding_document ( id ) ON DELETE RESTRICT
+    text_search_document_id int53 NOT NULL REFERENCES text_search_document ( id ) ON DELETE RESTRICT
 );
 
 CREATE FUNCTION document_after_delete_trigger () RETURNS trigger AS $$
@@ -78,7 +78,7 @@ CREATE TRIGGER document_after_delete AFTER DELETE ON document FOR EACH ROW EXECU
 CREATE TABLE query (
     id serial8 PRIMARY KEY,
     content text NOT NULL,
-    text_search_document_id int53 NOT NULL REFERENCES text_search_embedding_document ( id ) ON DELETE RESTRICT
+    text_search_document_id int53 NOT NULL REFERENCES text_search_document ( id ) ON DELETE RESTRICT
 );
 
 CREATE FUNCTION query_after_delete_trigger () RETURNS trigger AS $$
@@ -139,15 +139,15 @@ const storageId = 1,
 const res = await dbh.select(sql`
 SELECT
     document.id,
-    text_search_document.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) AS distance
+    text_search_document_view.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) AS distance
 FROM
     document,
-    text_search_document AS e
+    text_search_document_view
 WHERE
-    document.text_search_document_id = text_search_document.id
-    AND ( text_search_document.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) ) <= ${distanceThreshold}
+    document.text_search_document_id = text_search_document_view.id
+    AND ( text_search_document_view.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) ) <= ${distanceThreshold}
 ORDER BY
-    text_search_document.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 )
+    text_search_document_view.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 )
 LIMIT 10
 `);
 ```
