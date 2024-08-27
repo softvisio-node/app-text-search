@@ -139,16 +139,16 @@ const storageId = 1,
 const res = await dbh.select(sql`
 SELECT
     document.id,
-    text_search_vector.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_vector( ${queryDocumentId}::int53 ) AS distance
+    text_search_document_vector.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) AS distance
 FROM
     document,
-    text_search_vector AS e
+    text_search_document_vector AS e
 WHERE
-    document.text_search_document_id = text_search_vector.id
-    AND text_search_vector.storage_id = ?
-    AND ( text_search_vector.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_vector( ${queryDocumentId}::int53 ) ) <= ${distanceThreshold}
+    document.text_search_document_id = text_search_document_vector.id
+    AND text_search_document_vector.storage_id = ?
+    AND ( text_search_document_vector.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) ) <= ${distanceThreshold}
 ORDER BY
-    text_search_vector.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_vector( ${queryDocumentId}::int53 )
+    text_search_document_vector.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 )
 LIMIT 10
 `);
 ```
