@@ -1,5 +1,17 @@
 # Changelog
 
+### 2.0.0 (2024-08-28)
+
+Breaking changes:
+
+-   feat!: api refactor
+
+Features:
+
+-   feat: document created field
+
+Migration:
+
 ### 1.2.0 (2024-08-26)
 
 Features:
