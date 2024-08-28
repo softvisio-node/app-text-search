@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.0.1 (2024-08-28)
+
+Fixes:
+
+-   fix: SET maintenance_work_mem removed
+
 ### 2.0.0 (2024-08-28)
 
 Breaking changes:
