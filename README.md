@@ -1,6 +1,6 @@
 <!-- !!! DO NOT EDIT, THIS FILE IS GENERATED AUTOMATICALLY !!!  -->
 
-> :information_source: Please, see the full project documentation here: [https://softvisio-node.github.io/app-component-text-search/](https://softvisio-node.github.io/app-component-text-search/).
+> :information_source: Please, see the full project documentation here: [https://softvisio-node.github.io/app-text-search/](https://softvisio-node.github.io/app-text-search/).
 
 # Introduction
 
@@ -11,7 +11,7 @@ Provides possibility to perform full-text seatch and similarity search using tex
 ## Install
 
 ```shell
-npm i @softvisio/app-component-text-search
+npm i @softvisio/app-text-search
 ```
 
 ## Usage

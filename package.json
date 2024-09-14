@@ -1,19 +1,19 @@
 {
-    "name": "@softvisio/app-component-text-search",
+    "name": "@softvisio/app-text-search",
     "version": "2.1.0",
     "description": "Text search application component",
     "keywords": [
         "softvisio",
         "text search"
     ],
-    "homepage": "https://softvisio-node.github.io/app-component-text-search/",
+    "homepage": "https://softvisio-node.github.io/app-text-search/",
     "bugs": {
-        "url": "https://github.com/softvisio-node/app-component-text-search/issues",
+        "url": "https://github.com/softvisio-node/app-text-search/issues",
         "email": "root <root@softvisio.net>"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/softvisio-node/app-component-text-search.git"
+        "url": "git+https://github.com/softvisio-node/app-text-search.git"
     },
     "license": "ISC",
     "author": "root <root@softvisio.net>",

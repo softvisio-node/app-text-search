@@ -7,7 +7,7 @@ Provides possibility to perform full-text seatch and similarity search using tex
 ## Install
 
 ```shell
-npm i @softvisio/app-component-text-search
+npm i @softvisio/app-text-search
 ```
 
 ## Usage
