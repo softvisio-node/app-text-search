@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.1 (2024-09-14)
+
+Fixes:
+
+-   fix: package renamed
+
 ### 2.1.0 (2024-09-14)
 
 Features:
