@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.2 (2024-09-14)
+
+Fixes:
+
+-   fix: #app import removed
+
 ### 2.1.1 (2024-09-14)
 
 Fixes:
