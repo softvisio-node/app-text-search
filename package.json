@@ -43,6 +43,6 @@
         "gpt-tokenizer": "^2.2.1"
     },
     "peerDependencies": {
-        "@softvisio/app": "^1.0.0-alpha.0"
+        "@softvisio/app": "^2.0.0"
     }
 }
