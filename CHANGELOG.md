@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.4 (2024-09-15)
+
+Fixes:
+
+-   fix: xenova model removed
+
 ### 2.1.3 (2024-09-14)
 
 Fixes:
