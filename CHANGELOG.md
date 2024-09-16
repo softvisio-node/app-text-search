@@ -1,5 +1,12 @@
 # Changelog
 
+### 2.1.5 (2024-09-16)
+
+Fixes:
+
+-   fix: app
+-   fix: app instance removed
+
 ### 2.1.4 (2024-09-15)
 
 Fixes:
