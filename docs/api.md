@@ -1,5 +1,3 @@
-## API
-
 ## Full-text search
 
 ```sql
