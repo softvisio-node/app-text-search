@@ -34,9 +34,6 @@
         "/resources",
         "/src"
     ],
-    "scripts": {
-        "publish": "softvisio-cli package publish"
-    },
     "dependencies": {
         "gpt-tokenizer": "^2.2.1"
     },
