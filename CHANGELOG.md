@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.13 (2024-10-20)
+
+No notable changes since the previous release.
+
+[Full list of the changes](https://github.com/softvisio-node/app-text-search/compare/v2.1.12...v2.1.13)
+
 ### 2.1.12 (2024-10-16)
 
 No notable changes since the previous release.
