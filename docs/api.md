@@ -84,16 +84,18 @@ Create documents
 
 ```javascript
 // create documents storage
-const documentsStorage = await this.app.textSearch.createStorage("text-embedding-3-small", "RETRIEVAL_DOCUMENT");
+const documentsStorage = await this.app.textSearch.createStorage( "text-embedding-3-small", "RETRIEVAL_DOCUMENT" );
 
-if (documentsStorage.ok) {
+if ( documentsStorage.ok ) {
+
     // XXX store documentsStorage.data.id somewhere
 }
 
 // create document
-const document = await this.app.textSearch.createDocument(documentsStorage.data.id, "DOCUMENT TEXT");
+const document = await this.app.textSearch.createDocument( documentsStorage.data.id, "DOCUMENT TEXT" );
 
-if (document.ok) {
+if ( document.ok ) {
+
     // XXX store document.data.id in text_search_document_id
 }
 ```
@@ -102,16 +104,18 @@ Create queries
 
 ```javascript
 // create queries storage
-const queriesStorage = await this.app.textSearch.createStorage("text-embedding-3-small", "RETRIEVAL_QUERY");
+const queriesStorage = await this.app.textSearch.createStorage( "text-embedding-3-small", "RETRIEVAL_QUERY" );
 
-if (queriesStorage.ok) {
+if ( queriesStorage.ok ) {
+
     // XXX store queriesStorage.data.id somewhere
 }
 
 // create query
-const query = await this.app.textSearch.createDocument(queriesStorage.data.id, "QUERY TEXT");
+const query = await this.app.textSearch.createDocument( queriesStorage.data.id, "QUERY TEXT" );
 
-if (query.ok) {
+if ( query.ok ) {
+
     // XXX store query.data.id in text_search_document_id
 }
 ```
@@ -120,25 +124,25 @@ Search documents similar to the query
 
 ```javascript
 const storageId = 1,
-    storageVectorDimensions = await this.app.textSearch.getStorageVectorDimensions(storageId),
+    storageVectorDimensions = await this.app.textSearch.getStorageVectorDimensions( storageId ),
     distanceThreshold = 0.2,
     queryDocumentId = 1;
 
-const res = await dbh.select(sql`
+const res = await dbh.select( sql`
 SELECT
     document.id,
-    ts.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) AS distance
+    ts.vector::vector( ${ sql( storageVectorDimensions ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 ) AS distance
 FROM
     document,
     text_search_document_view AS ts
 WHERE
     document.text_search_document_id = ts.id
-    AND ts.storage_id = ${storageId}
-    AND ( ts.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 ) ) <= ${distanceThreshold}
+    AND ts.storage_id = ${ storageId }
+    AND ( ts.vector::vector( ${ sql( storageVectorDimensions ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 ) ) <= ${ distanceThreshold }
 ORDER BY
-    ts.vector::vector( ${sql(storageVectorDimensions)} ) <=> get_text_search_document_vector( ${queryDocumentId}::int53 )
+    ts.vector::vector( ${ sql( storageVectorDimensions ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 )
 LIMIT 10
-`);
+` );
 ```
 
 NOTES:
