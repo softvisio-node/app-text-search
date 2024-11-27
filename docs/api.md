@@ -147,6 +147,6 @@ LIMIT 10
 
 NOTES:
 
--   Cosine distance is between `0` and `2`. Less value means document more similar with the query, `0` - means documents are 100% similar.
+- Cosine distance is between `0` and `2`. Less value means document more similar with the query, `0` - means documents are 100% similar.
 
--   `ORDER BY` distance must be `ASC` only, otherwise index will not be used.
+- `ORDER BY` distance must be `ASC` only, otherwise index will not be used.

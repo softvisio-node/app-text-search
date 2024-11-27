@@ -1,6 +1,6 @@
--   [Introduction](/)
--   [API](api.md)
+- [Introduction](/)
+- [API](api.md)
 
 **Links**
 
--   [Changelog](/changelog)
+- [Changelog](/changelog)
