@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.1.18 (2024-12-07)
+
+Other changes:
+
+- chore: set yaml indent to 4 spaces
+
+[Compare with the previous release: v2.1.17 ... v2.1.18](https://github.com/softvisio-node/app-text-search/compare/v2.1.17...v2.1.18)
+
 ### 2.1.17 (2024-11-27)
 
 Other changes:
