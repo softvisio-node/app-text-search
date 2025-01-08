@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.1.19 (2025-01-08)
+
+Other changes:
+
+- chore: update package metadata
+
+[Compare with the previous release: v2.1.18 ... v2.1.19](https://github.com/softvisio-node/app-text-search/compare/v2.1.18...v2.1.19)
+
 ### 2.1.18 (2024-12-07)
 
 Other changes:
