@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.1.20 (2025-02-19)
+
+Other changes:
+
+- chore: update cli config
+
+Compare with the previous release: [`v2.1.19...v2.1.20`](https://github.com/softvisio-node/app-text-search/compare/v2.1.19...v2.1.20)
+
 ### 2.1.19 (2025-01-08)
 
 Other changes:
