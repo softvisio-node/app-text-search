@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.1.21 (2025-02-26)
+
+Other changes:
+
+- chore: update editorconfig
+
+Compare with the previous release: [`v2.1.20...v2.1.21`](https://github.com/softvisio-node/app-text-search/compare/v2.1.20...v2.1.21)
+
 ### 2.1.20 (2025-02-19)
 
 Other changes:
