@@ -1,7 +1,7 @@
 releasable: true
 
 docs:
-    location: /docs
+  location: /docs
 
-    externalTypes:
-        - softvisio-node/result
+  externalTypes:
+    - softvisio-node/result
