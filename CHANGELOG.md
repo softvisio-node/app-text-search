@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.1.22 (2025-02-27)
+
+Other changes:
+
+- chore: add editorconfig yaml
+
+Compare with the previous release: [`v2.1.21...v2.1.22`](https://github.com/softvisio-node/app-text-search/compare/v2.1.21...v2.1.22)
+
 ### 2.1.21 (2025-02-26)
 
 Other changes:
