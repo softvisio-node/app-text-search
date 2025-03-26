@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.1.26 (2025-03-26)
+
+Other changes:
+
+- chore: update markdown code tags
+
+Compare with the previous release: [`v2.1.25...v2.1.26`](https://github.com/softvisio-node/app-text-search/compare/v2.1.25...v2.1.26)
+
 ### 2.1.25 (2025-03-04)
 
 Other changes:
