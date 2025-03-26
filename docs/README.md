@@ -6,6 +6,6 @@ Provides possibility to perform full-text seatch and similarity search using tex
 
 ## Install
 
-```shell
+```sh
 npm install @softvisio/app-text-search
 ```
