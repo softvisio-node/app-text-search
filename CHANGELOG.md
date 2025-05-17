@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.0 (2025-05-17)
+
+**Features:**
+
+- \[MINOR] feat: use ai api (👬 zdm)
+
+Compare with the previous release: [`v2.1.26...v2.2.0`](https://github.com/softvisio-node/app-text-search/compare/v2.1.26...v2.2.0)
+
 ### 2.1.26 (2025-03-26)
 
 Other changes:
