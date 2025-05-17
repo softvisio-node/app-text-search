@@ -124,23 +124,23 @@ Search documents similar to the query
 
 ```javascript
 const storageId = 1,
-    storageVectorDimensions = await this.app.textSearch.getStorageVectorDimensions( storageId ),
+    storageEmbeddingSize = await this.app.textSearch.getStorageEmbeddingSize( storageId ),
     distanceThreshold = 0.2,
     queryDocumentId = 1;
 
 const res = await dbh.select( sql`
 SELECT
     document.id,
-    ts.vector::halfvec( ${ sql( storageVectorDimensions ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 ) AS distance
+    ts.vector::halfvec( ${ sql( storageEmbeddingSize ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 ) AS distance
 FROM
     document,
     text_search_document_view AS ts
 WHERE
     document.text_search_document_id = ts.id
     AND ts.storage_id = ${ storageId }
-    AND ( ts.vector::halfvec( ${ sql( storageVectorDimensions ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 ) ) <= ${ distanceThreshold }
+    AND ( ts.vector::halfvec( ${ sql( storageEmbeddingSize ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 ) ) <= ${ distanceThreshold }
 ORDER BY
-    ts.vector::halfvec( ${ sql( storageVectorDimensions ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 )
+    ts.vector::halfvec( ${ sql( storageEmbeddingSize ) } ) <=> get_text_search_document_vector( ${ queryDocumentId }::int53 )
 LIMIT 10
 ` );
 ```
