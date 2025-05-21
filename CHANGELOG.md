@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.1 (2025-05-21)
+
+**Fixes:**
+
+- \[PATCH] fix: fix init models (👬 zdm)
+
+Compare with the previous release: [`v2.2.0...v2.2.1`](https://github.com/softvisio-node/app-text-search/compare/v2.2.0...v2.2.1)
+
 ### v2.2.0 (2025-05-17)
 
 **Features:**
