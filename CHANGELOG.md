@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.2 (2025-06-01)
+
+**Other changes:**
+
+- \[PATCH] chore: update docs (👬 zdm)
+
+Compare with the previous release: [v2.2.1](https://github.com/softvisio-node/app-text-search/compare/v2.2.1...v2.2.2)
+
 ### v2.2.1 (2025-05-21)
 
 **Fixes:**
