@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.3 (2025-06-07)
+
+**Other changes:**
+
+- \[PATCH] chore: update cli config (👬 zdm)
+
+Compare with the previous release: [v2.2.2](https://github.com/softvisio-node/app-text-search/compare/v2.2.2...v2.2.3)
+
 ### v2.2.2 (2025-06-01)
 
 **Other changes:**
