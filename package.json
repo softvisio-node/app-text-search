@@ -35,7 +35,7 @@
         "/src"
     ],
     "dependencies": {
-        "gpt-tokenizer": "^2.2.1"
+        "gpt-tokenizer": "^3.0.1"
     },
     "peerDependencies": {
         "@softvisio/core": "^7.101.6"
