@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.4 (2025-06-16)
+
+**Other changes:**
+
+- chore(deps): update package dependencies (● [942caa0](https://github.com/softvisio-node/app-text-search/commit/942caa0); 👬 zdm)
+
+Compare with the previous release: [v2.2.3](https://github.com/softvisio-node/app-text-search/compare/v2.2.3...v2.2.4)
+
 ### v2.2.3 (2025-06-07)
 
 **Other changes:**
