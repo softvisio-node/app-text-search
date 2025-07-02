@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.5 (2025-07-02)
+
+**Other changes:**
+
+- style: rename sql bool to boolean (● [a8caea9](https://github.com/softvisio-node/app-text-search/commit/a8caea9); 👬 zdm)
+
+Compare with the previous release: [v2.2.4](https://github.com/softvisio-node/app-text-search/compare/v2.2.4...v2.2.5)
+
 ### v2.2.4 (2025-06-16)
 
 **Other changes:**
