@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.6 (2025-07-16)
+
+**Other changes:**
+
+- docs: update (● [c32acca](https://github.com/softvisio-node/app-text-search/commit/c32acca); 👬 zdm)
+
+Compare with the previous release: [v2.2.5](https://github.com/softvisio-node/app-text-search/compare/v2.2.5...v2.2.6)
+
 ### v2.2.5 (2025-07-02)
 
 **Other changes:**
