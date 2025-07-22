@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.7 (2025-07-22)
+
+**Bug fixes:**
+
+- \[PATCH] fix: fix editorconfig (● [217afe7](https://github.com/softvisio-node/app-text-search/commit/217afe7); 👬 zdm)
+
+Compare with the previous release: [v2.2.6](https://github.com/softvisio-node/app-text-search/compare/v2.2.6...v2.2.7)
+
 ### v2.2.6 (2025-07-16)
 
 **Other changes:**
