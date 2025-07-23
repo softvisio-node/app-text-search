@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.9 (2025-07-23)
+
+**Other changes:**
+
+- style: update .npmrc (● [c64b523](https://github.com/softvisio-node/app-text-search/commit/c64b523); 👬 zdm)
+
+Compare with the previous release: [v2.2.8](https://github.com/softvisio-node/app-text-search/compare/v2.2.8...v2.2.9)
+
 ### v2.2.8 (2025-07-23)
 
 **Bug fixes:**
